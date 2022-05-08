@@ -1,12 +1,15 @@
-import { useEffect } from 'react';
-import './App.css';
-import { ImagesList, Upload } from './components';
-import { createThumbnail } from './services/thumbnail/thumbnail.service';
+import { useEffect } from "react";
+import "./App.css";
+import { ImagesList, Upload } from "./components";
+import { createThumbnail } from "./services/thumbnail/thumbnail.service";
+import { withAuthenticator } from "@aws-amplify/ui-react";
+import "@aws-amplify/ui-react/styles.css";
+import { signOut } from "./services";
 
 function App() {
-  useEffect(() => {
-    createThumbnail().then(res => console.log(res)).catch((e) => console.error(e));
-  }, []);
+  // useEffect(() => {
+  //   createThumbnail().then(res => console.log(res)).catch((e) => console.error(e));
+  // }, []);
 
   return (
     <div className="App">
@@ -14,8 +17,17 @@ function App() {
         <Upload />
       </header>
       <ImagesList />
+      <button
+        onClick={() => {
+          signOut()
+            .then(() => window.location.reload())
+            .catch((e) => console.error(e));
+        }}
+      >
+        Log out
+      </button>
     </div>
   );
 }
 
-export default App;
+export default withAuthenticator(App);
