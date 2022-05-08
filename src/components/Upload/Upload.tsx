@@ -13,6 +13,7 @@ export const Upload = () => {
       Body: file,
       Bucket: process.env.REACT_APP_S3_BUCKET,
       Key: file.name,
+      ContentType: 'image/png',
     };
 
     try {

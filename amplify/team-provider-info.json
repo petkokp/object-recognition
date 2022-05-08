@@ -12,14 +12,14 @@
       "AmplifyAppId": "d2gv35a2ebxtsr"
     },
     "categories": {
+      "auth": {
+        "objectrecognition0d9c86a2": {}
+      },
       "function": {
         "createThumbnail": {
           "deploymentBucketName": "amplify-objectrecognition-dev-130540-deployment",
-          "s3Key": "amplify-builds/createThumbnail-455871502b7354704661-build.zip"
+          "s3Key": "amplify-builds/createThumbnail-762b634f496e724a7263-build.zip"
         }
-      },
-      "auth": {
-        "objectrecognition0d9c86a2": {}
       }
     }
   }

@@ -33,9 +33,8 @@ export const ImagesList = () => {
       {images.map((image) => (
         <>
           <ul key={image.key}>
-            <li>Key: {image.key}</li>
-            <li>ETag: {image.etag}</li>
-            <li value={`${image.owner}`}></li>
+            <img src={`${process.env.REACT_APP_IMAGES_BUCKET_URL}/${image.key}`} width={200} />
+            <li>Name: {image.key}</li>
           </ul>
           <br />
         </>

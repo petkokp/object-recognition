@@ -3,25 +3,19 @@
     "createThumbnail": {
       "build": true,
       "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    }
-  },
-  "api": {
-    "createThumbnail": {
-      "service": "API Gateway",
-      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
       "dependsOn": [
         {
-          "category": "function",
-          "resourceName": "createThumbnail",
+          "category": "auth",
+          "resourceName": "objectrecognition0d9c86a2",
           "attributes": [
-            "Name",
-            "Arn"
+            "UserPoolId"
           ]
         }
       ]
     }
   },
+  "api": {},
   "auth": {
     "objectrecognition0d9c86a2": {
       "service": "Cognito",
