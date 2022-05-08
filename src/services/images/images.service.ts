@@ -16,7 +16,7 @@ const s3 = new S3Client({
   region: REGION,
   credentials: fromCognitoIdentityPool({
     client: new CognitoIdentityClient({ region: REGION }),
-    identityPoolId: process.env.IDENTITY_POOL_ID || '',
+    identityPoolId: process.env.REACT_APP_IDENTITY_POOL_ID || '',
   }),
 });
 

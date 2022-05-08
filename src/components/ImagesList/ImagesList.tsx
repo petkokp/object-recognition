@@ -17,7 +17,6 @@ export const ImagesList = () => {
       Delimiter: "/",
     })
       .then((res) => {
-        console.log(res);
         setImages(
           res?.Contents?.map((item) => ({
             key: item.Key,
@@ -33,7 +32,7 @@ export const ImagesList = () => {
     <div>
       {images.map((image) => (
         <>
-          <ul>
+          <ul key={image.key}>
             <li>Key: {image.key}</li>
             <li>ETag: {image.etag}</li>
             <li value={`${image.owner}`}></li>

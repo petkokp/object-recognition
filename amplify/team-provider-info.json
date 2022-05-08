@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-objectrecognition-dev-130540-authRole",
+      "UnauthRoleArn": "arn:aws:iam::385785257360:role/amplify-objectrecognition-dev-130540-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::385785257360:role/amplify-objectrecognition-dev-130540-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-objectrecognition-dev-130540-deployment",
+      "UnauthRoleName": "amplify-objectrecognition-dev-130540-unauthRole",
+      "StackName": "amplify-objectrecognition-dev-130540",
+      "StackId": "arn:aws:cloudformation:eu-central-1:385785257360:stack/amplify-objectrecognition-dev-130540/89761630-ceb6-11ec-bd12-0a8aba69f466",
+      "AmplifyAppId": "d2gv35a2ebxtsr"
+    },
+    "categories": {
+      "function": {
+        "createThumbnail": {
+          "deploymentBucketName": "amplify-objectrecognition-dev-130540-deployment",
+          "s3Key": "amplify-builds/createThumbnail-455871502b7354704661-build.zip"
+        }
+      }
+    }
+  }
+}
