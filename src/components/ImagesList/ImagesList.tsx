@@ -1,15 +1,12 @@
-import { Owner } from "@aws-sdk/client-s3";
 import { useEffect, useState } from "react";
+import {
+  ImageList,
+} from "@mui/material";
 import { listImages } from "../../services";
-
-type Image = {
-  key: string | undefined;
-  etag: string | undefined;
-  owner: Owner | undefined;
-};
+import { Image, ImageMetadata } from '../Image';
 
 export const ImagesList = () => {
-  const [images, setImages] = useState<Image[]>([]);
+  const [images, setImages] = useState<ImageMetadata[]>([]);
 
   useEffect(() => {
     listImages({
@@ -29,16 +26,10 @@ export const ImagesList = () => {
   }, []);
 
   return (
-    <div>
-      {images.map((image) => (
-        <>
-          <ul key={image.key}>
-            <img src={`${process.env.REACT_APP_IMAGES_BUCKET_URL}/${image.key}`} width={200} />
-            <li>Name: {image.key}</li>
-          </ul>
-          <br />
-        </>
+    <ImageList>
+      {images.map((item) => (
+        <Image item={item} />
       ))}
-    </div>
+    </ImageList>
   );
 };
