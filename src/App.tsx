@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Box, Tabs, Tab } from "@mui/material";
 import "./App.css";
 import { ImagesList, Upload, Logout, TabPanel } from "./components";
@@ -12,17 +12,28 @@ function a11yProps(index: number) {
   };
 }
 
+const formFields = {
+  signUp: {
+    username: {
+      placeholder: 'Email',
+      isRequired: true,
+    },
+  },
+  signIn: {
+    username: {
+      placeholder: 'Email',
+      isRequired: true,
+    },
+  },
+ }
+
 function App() {
   const [value, setValue] = useState(0);
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleChange = (_: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
 
-  useEffect(() => {
-    // detectLabels().then((res) => console.log(res)).catch((e) => console.error(e));
-    // createThumbnail().then(res => console.log(res)).catch((e) => console.error(e));
-  }, []);
 
   return (
     <div className="App">
@@ -51,4 +62,4 @@ function App() {
   );
 }
 
-export default withAuthenticator(App);
+export default withAuthenticator(App, { formFields });
