@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 import {
   ImageListItem,
   ImageListItemBar,
@@ -11,16 +11,16 @@ import { detectLabels } from "../../services";
 
 export type ImageMetadata = {
   key: string | undefined;
-    etag: string | undefined;
-    owner: Owner | undefined;
-}
+  etag: string | undefined;
+  owner: Owner | undefined;
+};
 
 export interface ImageProps {
-  item: ImageMetadata
+  item: ImageMetadata;
 }
 
 export const Image = ({ item }: ImageProps) => {
-  const [labels, setLabels] = useState<string[] | undefined>([]);
+  const [labels, setLabels] = useState("");
 
   return (
     <ImageListItem key={item.key} style={{ width: "33%", overflow: "hidden" }}>
@@ -38,16 +38,14 @@ export const Image = ({ item }: ImageProps) => {
         }
         position="below"
         onClick={async () => {
-          if (item.key) setLabels(await detectLabels(item.key));
+          if (item.key) setLabels((await detectLabels(item.key))?.join(", ") || '');
         }}
       />
       <List>
         {labels?.length ? "This is:" : ""}
-        {labels?.map((label) => (
-          <ListItem>
-            <ListItemText primary={label} />
-          </ListItem>
-        ))}
+        <ListItem>
+          <ListItemText primary={labels} />
+        </ListItem>
       </List>
     </ImageListItem>
   );

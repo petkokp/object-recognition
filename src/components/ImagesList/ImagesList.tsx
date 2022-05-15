@@ -28,7 +28,7 @@ export const ImagesList = () => {
   return (
     <ImageList>
       {images.map((item) => (
-        <Image item={item} />
+        <Image key={item.key} item={item} />
       ))}
     </ImageList>
   );
