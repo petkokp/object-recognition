@@ -1,23 +1,23 @@
 {
-    "dev": {
-        "awscloudformation": {
-            "AuthRoleName": "amplify-objectrecognition-dev-130740-authRole",
-            "UnauthRoleArn": "arn:aws:iam::385785257360:role/amplify-objectrecognition-dev-130740-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::385785257360:role/amplify-objectrecognition-dev-130740-authRole",
-            "Region": "eu-central-1",
-            "DeploymentBucketName": "amplify-objectrecognition-dev-130740-deployment",
-            "UnauthRoleName": "amplify-objectrecognition-dev-130740-unauthRole",
-            "StackName": "amplify-objectrecognition-dev-130740",
-            "StackId": "arn:aws:cloudformation:eu-central-1:385785257360:stack/amplify-objectrecognition-dev-130740/fc33d2e0-d436-11ec-bf85-0645d1766662",
-            "AmplifyAppId": "d1j5itecfpoklj"
-        },
-        "categories": {
-            "hosting": {
-                "amplifyhosting": {
-                    "appId": "d1j5itecfpoklj",
-                    "type": "cicd"
-                }
-            }
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-objectrecognition-dev-130740-authRole",
+      "UnauthRoleArn": "arn:aws:iam::385785257360:role/amplify-objectrecognition-dev-130740-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::385785257360:role/amplify-objectrecognition-dev-130740-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-objectrecognition-dev-130740-deployment",
+      "UnauthRoleName": "amplify-objectrecognition-dev-130740-unauthRole",
+      "StackName": "amplify-objectrecognition-dev-130740",
+      "StackId": "arn:aws:cloudformation:eu-central-1:385785257360:stack/amplify-objectrecognition-dev-130740/fc33d2e0-d436-11ec-bf85-0645d1766662",
+      "AmplifyAppId": "d1j5itecfpoklj"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d1j5itecfpoklj",
+          "type": "cicd"
         }
+      }
     }
+  }
 }
