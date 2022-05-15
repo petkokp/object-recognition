@@ -23,7 +23,7 @@ export const Image = ({ item }: ImageProps) => {
   const [labels, setLabels] = useState("");
 
   return (
-    <ImageListItem key={item.key} style={{ width: "33%", overflow: "hidden" }}>
+    <ImageListItem key={item.key} style={{ width: "50%", overflow: "hidden" }}>
       <img
         src={`${process.env.REACT_APP_IMAGES_BUCKET_URL}/${item.key}`}
         alt={item.key}
@@ -38,7 +38,9 @@ export const Image = ({ item }: ImageProps) => {
         }
         position="below"
         onClick={async () => {
-          if (item.key) setLabels((await detectLabels(item.key))?.join(", ") || '');
+          if (!labels && item.key) {
+            setLabels((await detectLabels(item.key))?.join(", ") || "");
+          }
         }}
       />
       <List>

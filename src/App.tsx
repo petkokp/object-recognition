@@ -12,26 +12,6 @@ function a11yProps(index: number) {
   };
 }
 
-const formFields = {
-  signUp: {
-    username: {
-      placeholder: "Email",
-      isRequired: true,
-    },
-  },
-  signIn: {
-    username: {
-      placeholder: "Email",
-      isRequired: true,
-    },
-  },
-};
-
-const handleConfirmSignIn = ({ user, code, mfaType }: any) => {
-  debugger;
-  return new Promise((resolve, reject) => resolve('a'));
-};
-
 function App() {
   const [value, setValue] = useState(0);
 
@@ -66,7 +46,4 @@ function App() {
   );
 }
 
-export default withAuthenticator(App, {
-  formFields,
-  services: { handleConfirmSignIn },
-});
+export default withAuthenticator(App);

@@ -21,7 +21,7 @@ export const Upload = () => {
 
     try {
       await uploadImage(params);
-      setResponse("Successfully uploaded the image!");
+      setResponse("Successfully uploaded the image! You can find it in View Images!");
     } catch (error) {
       setResponse("Error while trying to upload the image :(");
       console.error(error);

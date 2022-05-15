@@ -17,6 +17,12 @@
           "appId": "d1j5itecfpoklj",
           "type": "cicd"
         }
+      },
+      "function": {
+        "autoConfirmAuth": {
+          "deploymentBucketName": "amplify-objectrecognition-dev-130740-deployment",
+          "s3Key": "amplify-builds/autoConfirmAuth-646c686e66736e413366-build.zip"
+        }
       }
     }
   }
